@@ -1,9 +1,9 @@
 {
   "name": "checkout",
   "version": "0.1.0",
+  "private": true,
   "description": "checkout description",
   "author": "nelomr9@gmail.com",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "postcss-apply": "^0.12.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "vue-cli-plugin-postcss-precss": "^1.0.1",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -35,6 +37,45 @@
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-assets": {
+        "cachebuster": false,
+        "loadPaths": [
+          "public/"
+        ]
+      },
+      "postcss-import": {},
+      "postcss-extend-rule": {},
+      "postcss-apply": {},
+      "postcss-advanced-variables": {},
+      "postcss-plugin-bem-atrule": {
+        "defaultNamespace": "el",
+        "style": "suit",
+        "separators": {
+          "descendent": "__",
+          "modifier": "--"
+        },
+        "shortcuts": {
+          "utility": "util",
+          "component": "b",
+          "modifier": "m",
+          "descendent": "e"
+        }
+      },
+      "postcss-preset-env": {
+        "stage": 2
+      },
+      "postcss-atroot": {},
+      "postcss-property-lookup": {},
+      "postcss-nested": {},
+      "postcss-nested-ancestors": {},
+      "postcss-calc": {},
+      "postcss-sass-color-functions": {},
+      "lost": false,
+      "postcss-utils": {}
+    }
   },
   "browserslist": [
     "> 1%",

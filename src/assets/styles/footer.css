@@ -1,0 +1,15 @@
+.footer {
+    padding: 18px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer--text {
+    font-family: var(--secondary-font);
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--text-color);
+}
