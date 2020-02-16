@@ -12,6 +12,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "postcss-apply": "^0.12.0",
+    "postcss-custom-media": "^7.0.8",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -67,6 +68,7 @@
       "postcss-preset-env": {
         "stage": 2
       },
+      "postcss-custom-media": {},
       "postcss-atroot": {},
       "postcss-property-lookup": {},
       "postcss-nested": {},
