@@ -19,6 +19,7 @@
 
 .step {
     position: relative;
+    color: var(--black-color);
 
     &:before {
         content: '';
