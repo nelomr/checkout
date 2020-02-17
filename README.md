@@ -1,4 +1,5 @@
 # checkout
+Example checkout with vue and vuex
 
 ## Project setup
 ```
