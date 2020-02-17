@@ -39,13 +39,12 @@ export default {
                     title: 'Pago',
                     completed: false
                 }
-            ],
-            state: 1
+            ]
         }
     },
     computed: {
         currentStep() {
-            return this.state;
+            return this.$store.state.step;
         }
     }
 }

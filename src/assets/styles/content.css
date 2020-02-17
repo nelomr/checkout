@@ -24,6 +24,10 @@
 
 .step-content {
     color: var(--black-color);
+
+    img {
+        max-width: 60px;
+    }
 }
 
 .step-content--title {
@@ -58,6 +62,7 @@
 
     input[type='text'] {
         height: 40px;
+        padding-left: 10px;
         appearance: none;
         border: 2px solid;
         border-color: var(--gray-color);
@@ -79,5 +84,10 @@
 
     .step-content--title {
         font-size: 24px;;
+    }
+
+    .is-thankyou-page & {
+        margin: 0;
+        border: none;
     }
 }

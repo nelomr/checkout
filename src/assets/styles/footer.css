@@ -13,3 +13,7 @@
     line-height: 12px;
     color: var(--text-color);
 }
+
+.footer-logo img {
+    width: 37px;
+}

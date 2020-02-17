@@ -5,17 +5,8 @@
                 2020 © We Are Marketing
             </div>
             <a href="#" class="footer-logo">
-                <IconLogo></IconLogo>
+                <img src="logo.png" alt="logo">
             </a>
         </div>
     </footer>
 </template>
-
-<script>
-import IconLogo from "./icons/IconLogo";
-export default {
-    components: {
-        IconLogo
-   }
-}
-</script>

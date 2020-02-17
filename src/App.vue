@@ -8,7 +8,8 @@
               <div class="main-content--container">
                 <StepContnet1 v-if="currentStep == 1"></StepContnet1>
                 <StepContnet2 v-if="currentStep == 2"></StepContnet2>
-                <StepButtons></StepButtons>
+                <ThankyouTemplate :content="thankyouContent" v-if="currentStep == 3"></ThankyouTemplate>
+                <StepButtons v-if="currentStep < 3"></StepButtons>
               </div>
             </div>
         </div>
@@ -23,6 +24,7 @@ import StepBar from './components/StepBar.vue';
 import StepButtons from './components/StepButtons.vue';
 import StepContnet1 from './components/StepContent1.vue';
 import StepContnet2 from './components/StepContent2.vue';
+import ThankyouTemplate from './components/ThankyouTemplate.vue';
 import Footer from './components/FooterComponent.vue';
 
 export default {
@@ -33,17 +35,16 @@ export default {
     StepButtons,
     StepContnet1,
     StepContnet2,
+    ThankyouTemplate,
     Footer
   },
-  data: function() {
-        return {
-            state: 1
-        }
-    },
-    computed: {
-        currentStep() {
-            return this.state;
-        }
-    }
+  computed: {
+      currentStep() {
+          return this.$store.state.step;
+      },
+      thankyouContent() {
+        return this.$store.state.thankyouResponse;
+      }
+  }
 }
 </script>

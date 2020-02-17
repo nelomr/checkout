@@ -8,6 +8,10 @@
     }
 }
 
+.header-logo img {
+    width: 37px;
+}
+
 .menu--list {
     display: flex;
     flex-wrap: wrap;

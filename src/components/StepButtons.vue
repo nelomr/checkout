@@ -20,26 +20,24 @@ export default {
         IconButtonRight,
         IconButtonLeft
     },
-    data: function() {
-        return {
-            state: 1
-        }
-    },
     computed: {
         currentStep() {
-            return this.state;
+            return this.$store.state.step;
         }
     },
     methods: {
         next() {
-            if (this.state < 3) {
-                this.state++;
+            if (this.currentStep == 2) {
+                this.$store.dispatch('paymentCall');
+                return
             }
-            
+            if (this.currentStep < 3) {
+                this.$store.dispatch('incrementStep');
+            }
         },
         prev() {
-            if (this.state > 1) {
-                this.state++;
+            if (this.currentStep > 1) {
+                this.$store.dispatch('decreaseStep');
             }
         }
     }

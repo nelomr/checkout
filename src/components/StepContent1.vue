@@ -5,12 +5,34 @@
         <form class="step-content--form" action="">
             <div class="step-content--field">
                 <label for="Nombre">Nombre</label>
-                <input name="Nombre" type="text">
+                <input :value="name" @input="updateName" name="Nombre" type="text">
             </div>
             <div class="step-content--field">
                 <label for="Apellidos">Apellidos</label>
-                <input name="Apellidos" type="text">
+                <input :value="surname" @input="updateSurname" name="Apellidos" type="text">
             </div>
         </form>
     </div>
 </template>
+
+<script>
+
+export default {
+    computed: {
+        name() {
+            return this.$store.state.name;
+        },
+        surname() {
+            return this.$store.state.surname;
+        }
+    },
+    methods: {
+        updateName (e) {
+            this.$store.commit('updateName', e.target.value)
+        },
+        updateSurname (e) {
+            this.$store.commit('updateSurname', e.target.value)
+        }
+    }
+}
+</script>

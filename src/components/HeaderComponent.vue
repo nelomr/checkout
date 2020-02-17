@@ -1,8 +1,8 @@
 <template>
     <header class="header">
         <div class="container">
-            <a href="#" class="hedaer-logo">
-                <IconLogo></IconLogo>
+            <a href="#" class="header-logo">
+                <img src="logo.png" alt="logo">
             </a>
             <nav class="menu">
                 <ul class="menu--list">
@@ -30,14 +30,12 @@
 </template>
 
 <script>
-import IconLogo from "./icons/IconLogo";
 import IconBook from "./icons/IconBook";
 import IconArrowDown from "./icons/IconArrowDown";
 import IconPerson from "./icons/IconPerson";
 
 export default {
     components: {
-        IconLogo,
         IconBook,
         IconPerson,
         IconArrowDown
